@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>characterName</key>
+	<array>
+		<string>Franny Longbane</string>
+		<string>Prudence Springsoother</string>
+		<string>Minyas Gooseear</string>
+		<string>Tyler Bronzewatcher</string>
+		<string>Dominy Northfinger</string>
+		<string>Barnabas Swifthand</string>
+		<string>Priamos Oxmaker</string>
+		<string>Elspeth Spellboard</string>
+		<string>Prudence Ironkiss</string>
+		<string>Miles Freehunter</string>
+		<string>Wadard Hilltromp</string>
+		<string>Erasmus Shieldhouse</string>
+		<string>Cared Emeraldwind</string>
+		<string>Esmond Stoneriver</string>
+		<string>Minos Kingbeard</string>
+		<string>Bakis Milltouch</string>
+		<string>Rhakios Moonflinger</string>
+		<string>Leukon Ghostrock</string>
+		<string>Reginald Icechest</string>
+		<string>Noes Siegebuckle</string>
+		<string>Olympia Sharpchuckle</string>
+		<string>Berndan Stalesail</string>
+		<string>Erebos Cloudcrippler</string>
+		<string>Savannah Bluespear</string>
+		<string>Adelaide Leafsteel</string>
+		<string>Amphelice Gentlestinger</string>
+		<string>Ismenia Harpheart</string>
+		<string>Rychyld Hairrain</string>
+		<string>Syme Dustcleaver</string>
+		<string>Lysippe Knifesmile</string>
+		<string>Raoul Bearrunner</string>
+		<string>Etgar Trailchewer</string>
+		<string>Brice Grasswalker</string>
+		<string>Neilos Hollyknee</string>
+		<string>Ethan Flowercarol</string>
+		<string>Deidameia Hawkwhisper</string>
+		<string>Tansa Tallfang</string>
+		<string>Kimball Halffall</string>
+		<string>Micah Felvalley</string>
+		<string>Latinos Thornrazor</string>
+		<string>Thaeox Broadsoul</string>
+		<string>Folke Fireborn</string>
+		<string>Inigo Stormbright</string>
+		<string>Claudia Catsharp</string>
+		<string>Electra Macethumb</string>
+		<string>Victor Foxcaller</string>
+		<string>Chloe Ebonwing</string>
+		<string>Polydamna Ghouldance</string>
+		<string>Lysippe Foehelm</string>
+		<string>Willmott Drakelover</string>
+		<string>Delphos Faerieglove</string>
+		<string>Ywain Brightdancer</string>
+		<string>Henry Angelteeth</string>
+		<string>Declan Darkhoof</string>
+		<string>Teukros Killson</string>
+		<string>Galain Grayblade</string>
+		<string>Colson Needlestar</string>
+		<string>Cain Arrowbrow</string>
+		<string>Solyeuse Starslicer</string>
+		<string>Aithon Mudkick</string>
+		<string>Sybaris Coppertrail</string>
+		<string>Agnys Spiderheart</string>
+		<string>Chesias Nightsorcerer</string>
+		<string>Thearden Wiseclaw</string>
+		<string>Oberon Doomforger</string>
+		<string>Irae Flamesong</string>
+		<string>Lora Lightdazer</string>
+		<string>Chartain Latecutter</string>
+		<string>Danyell Rathide</string>
+		<string>Iobes Goblingust</string>
+		<string>Thora Oaktooth</string>
+		<string>Amabel Spiritbottom</string>
+		<string>Tarvorwen Smileharp</string>
+		<string>Derkynos Rainhood</string>
+		<string>Satyros Crowtraveler</string>
+		<string>Anne Mountainhowler</string>
+		<string>Arthur Treeblood</string>
+		<string>Aeditha Forgeknee</string>
+		<string>Brayden Bullbelly</string>
+		<string>Caroline Gloombound</string>
+		<string>Erebos Goldhair</string>
+		<string>Simond Silverbond</string>
+		<string>Folke Quicklaugher</string>
+		<string>Humphrey Dragonwhisker</string>
+		<string>Hamon Earthviper</string>
+		<string>Linette Monsterrend</string>
+		<string>Gyes Lawtoes</string>
+		<string>Minerva Glasssmasher</string>
+		<string>Alburg Tigerchaser</string>
+		<string>Serge Gemtalker</string>
+		<string>Cecily Drumstone</string>
+		<string>Wulfhilda Greenhound</string>
+		<string>Potitii Songknocker</string>
+		<string>Argo Glorystalker</string>
+		<string>Cole Gravecloak</string>
+		<string>Morgant Wolftongue</string>
+		<string>Ogaphos Dogsinger</string>
+		<string>Mathild Redcaster</string>
+		<string>Tristan Eaglekin</string>
+		<string>Irae Titancry</string>
+		<string>Tiphina Anvilcowl</string>
+		<string>Glauke Dirtglacier</string>
+		<string>Neilos Spinebrissle</string>
+		<string>Halli Jewelboot</string>
+		<string>Kath Riddleseeker</string>
+		<string>Belos Swordbrood</string>
+		<string>Estrild Giantspur</string>
+		<string>Kleobis Scalestorm</string>
+		<string>Oiax Dawnstorm</string>
+		<string>Powle Liongaze</string>
+		<string>Jemime Whitewillow</string>
+		<string>Oliver Gustgiver</string>
+		<string>Cecilia Strifehammer</string>
+		<string>Chryses Frostmaul</string>
+		<string>Phrasios Wyrmchange</string>
+		<string>Peripanos Herocloud</string>
+		<string>Cwengyth Willowmaster</string>
+		<string>Sighard Gravelhood</string>
+		<string>Symond Shadowmaul</string>
+		<string>Jeger Wormcloak</string>
+		<string>Justina Duskrend</string>
+		<string>Eustacia Beasthide</string>
+		<string>Glenda Gravelhelm</string>
+		<string>Percival Beastsmasher</string>
+		<string>Littlejohn Swiftslicer</string>
+		<string>Prokne Bronzecarol</string>
+		<string>Bayard Gentlefinger</string>
+		<string>Brayden Drumson</string>
+		<string>Richarde Copperchaser</string>
+		<string>Caesaria Fireclaw</string>
+		<string>Archedios Forgecloud</string>
+		<string>Lodwicke Quickrazor</string>
+		<string>Abigail Glasswind</string>
+		<string>Ysabel Northsteel</string>
+		<string>Jemime Mudblood</string>
+		<string>Sydney Stalesmile</string>
+		<string>Symond Ironfall</string>
+		<string>Orson Spiritknocker</string>
+		<string>Eva Wyrmrunner</string>
+		<string>Radolf Songgiver</string>
+		<string>Josiane Thorntalker</string>
+		<string>Dominy Dirttouch</string>
+		<string>Sevrin Willowboot</string>
+		<string>Minos Jewelhound</string>
+		<string>Alyne Emeraldtrail</string>
+		<string>Ellie Tallcleaver</string>
+		<string>Hailey Hillrain</string>
+		<string>Cashel Trailkiss</string>
+		<string>Galateia Gloryboard</string>
+		<string>Erebos Crowstar</string>
+		<string>Lapithes Broadharp</string>
+		<string>Pisos Titanspur</string>
+		<string>Walden Knifegaze</string>
+		<string>Osborne Moonseeker</string>
+		<string>Thomas Rainbright</string>
+		<string>Sabra Herogust</string>
+		<string>Ambrosia Freemaster</string>
+		<string>Marjore Cloudstalker</string>
+		<string>Skalk Scalehunter</string>
+		<string>Cyndra Lightdancer</string>
+		<string>Arabella Beardazer</string>
+		<string>Gianna Blueflinger</string>
+		<string>Tobiah Dragonchange</string>
+		<string>Miles Dustbelly</string>
+		<string>Eugenia Oxhoof</string>
+		<string>Rufus Earthknee</string>
+		<string>Halisera Siegefang</string>
+		<string>Thaeox Halfwillow</string>
+		<string>Deidameia Lionlaugher</string>
+		<string>Dominy Sharpteeth</string>
+		<string>Concessa Needleforger</string>
+		<string>Sithon Nightsoul</string>
+		<string>Addison Icehand</string>
+		<string>Danyell Dawnheart</string>
+		<string>Frideswide Harpbottom</string>
+		<string>Elaisse Mountaincutter</string>
+		<string>Nautes Graybond</string>
+		<string>Ceadda Hawkhair</string>
+		<string>Olivia Wormtromp</string>
+		<string>Ganelon Faerieheart</string>
+		<string>Rose Anvilwhisper</string>
+		<string>Leofwen Dogwalker</string>
+		<string>Jayden Spinekick</string>
+		<string>Halstein Darksong</string>
+		<string>Brien Redbrow</string>
+		<string>Jotham Swordhowler</string>
+		<string>Lauda Arrowcrippler</string>
+		<string>Erik Wisehouse</string>
+		<string>Dryope Angelborn</string>
+		<string>Cenwood Flowercaster</string>
+		<string>Christian Foxcaller</string>
+		<string>Pasiphae Dusklover</string>
+		<string>Aithilla Wolfstone</string>
+		<string>Katelyn Stormchuckle</string>
+		<string>Drew Ratsharp</string>
+		<string>Claudia Kingear</string>
+		<string>Prudence Ebonsorcerer</string>
+		<string>Celestia Latestinger</string>
+		<string>Abraham Flamechewer</string>
+		<string>Ancelot Gustcry </string>
+		<string>Agermus</string>
+		<string>Davica</string>
+		<string>Hudis</string>
+		<string>Raina Agustian</string>
+		<string>Devin</string>
+		<string>Inna</string>
+		<string>Anvam</string>
+		<string>Egar</string>
+		<string>Dolich</string>
+		<string>Itur</string>
+		<string>Alexine</string>
+		<string>Evenia</string>
+		<string>Islis</string>
+		<string>Sheencat Angar</string>
+		<string>Jeffrew</string>
+		<string>Pate Arglend</string>
+		<string>Fatus</string>
+		<string>Leodar</string>
+		<string>Tegeral Bithach</string>
+		<string>Grenn</string>
+		<string>Lugbat</string>
+		<string>Thelberne</string>
+		<string>Bonaid</string>
+		<string>Halocage</string>
+		<string>Maglo</string>
+		<string>Thoronda</string>
+		<string>Brattin</string>
+		<string>Hebert</string>
+		<string>Mochor</string>
+		<string>Tudon Britta</string>
+		<string>Helen</string>
+		<string>Wortis</string>
+		<string>Agenda</string>
+		<string>Hallin</string>
+		<string>Melyn</string>
+		<string>Ambert</string>
+		<string>Horne</string>
+		<string>Mendes</string>
+		<string>Saber</string>
+		<string>Austicoron</string>
+		<string>Hygrid</string>
+		<string>Missa</string>
+		<string>Saneen</string>
+		<string>Breannie</string>
+		<string>Gayle</string>
+		<string>Nairial</string>
+		<string>Sanni</string>
+		<string>Combine</string>
+		<string>Jengrid</string>
+		<string>Orcan</string>
+		<string>Selya</string>
+		<string>Eglain</string>
+		<string>Leisman</string>
+		<string>Pelreth</string>
+		<string>Severn</string>
+		<string>Doyle</string>
+		<string>Lemar</string>
+		<string>Peris</string>
+		<string>Tigit</string>
+		<string>Ewarka</string>
+		<string>Listhere</string>
+		<string>Tomorev</string>
+		<string>Foleen</string>
+		<string>Mablain</string>
+		<string>Redine</string>
+		<string>Tronnk</string>
+		<string>Grena</string>
+		<string>Malez</string>
+		<string>Ropire</string>
+		<string>Adech</string>
+		<string>Clestie</string>
+		<string>Heran</string>
+		<string>Sammyl</string>
+		<string>Aluset</string>
+		<string>Dariante</string>
+		<string>Kage</string>
+		<string>Shard</string>
+		<string>Aluvin</string>
+		<string>Deorhael</string>
+		<string>Kagi</string>
+		<string>Sland</string>
+		<string>Artina</string>
+		<string>Dresrin</string>
+		<string>Keanan</string>
+		<string>Artine</string>
+		<string>Edbert</string>
+		<string>Kunita</string>
+		<string>Thornelm</string>
+		<string>Artink</string>
+		<string>Elich</string>
+		<string>Mudarne</string>
+		<string>Tibba</string>
+		<string>Athen</string>
+		<string>Ogemtown</string>
+		<string>Cybill</string>
+		<string>Keven</string>
+		<string>Priva</string>
+		<string>Anbog</string>
+		<string>Lito</string>
+		<string>Pultaren</string>
+		<string>Angroc</string>
+		<string>Lear</string>
+		<string>Ronke</string>
+		<string>Besoth</string>
+		<string>Felana</string>
+		<string>Leat</string>
+		<string>Sengar</string>
+		<string>Bloodvine</string>
+		<string>Flama</string>
+		<string>Lexis</string>
+		<string>Snorg</string>
+		<string>Meter</string>
+		<string>Tigan</string>
+		<string>Duan Hanna</string>
+		<string>Mith</string>
+		<string>Edel</string>
+		<string>Herran</string>
+		<string>Noella</string>
+		<string>Elig</string>
+		<string>Hornt</string>
+		<string>Oneeye</string>
+		<string>Jozenn</string>
+		<string>Orgon</string>
+		<string>Vardo</string>
+		<string>Kerlyn</string>
+		<string>Elmic</string>
+		<string>Lean</string>
+		<string>Rawna</string>
+	</array>
+	<key>race</key>
+	<array>
+		<string>Dwarf</string>
+		<string>Elf</string>
+		<string>Halfling</string>
+		<string>Human</string>
+		<string>Dragonborn</string>
+		<string>Gnome</string>
+		<string>Tiefling</string>
+	</array>
+	<key>occupation</key>
+	<array>
+		<string>Gold miner</string>
+		<string>Blacksmith</string>
+		<string>Innkeeper</string>
+		<string>Traveling tradesman</string>
+		<string>Estranged noble</string>
+		<string>Poet</string>
+		<string>Spy</string>
+		<string>Priest</string>
+		<string>Healer</string>
+		<string>Prostitute</string>
+		<string>Leatherworker</string>
+		<string>Guardsman</string>
+		<string>Moneylender</string>
+		<string>Apothecary</string>
+		<string>Stonemason</string>
+		<string>Farmer</string>
+		<string>Shoemaker</string>
+		<string>Bounty Hunter</string>
+		<string>Carpenter</string>
+		<string>Servant</string>
+	</array>
+</dict>
+</plist>
