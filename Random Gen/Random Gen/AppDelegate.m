@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "REGPropertiesDatabase.h"
-#import "GlobalConstants.h"
+#import "REGCharacter.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     for (int i = 0; i < 10; i++) {
-        NSLog(@"Name: %@, Race: %@, Occupation: %@", [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:CHARACTER_NAME_KEY],
-              [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:RACE_KEY],
-              [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:OCCUPATION_KEY]   );
+        NSLog(@"%@", [REGCharacter randomCharacter]);
     }
     // Override point for customization after application launch.
     return YES;

@@ -14,6 +14,7 @@
 		E7285CA41A1E50740099F894 /* PropertiesDatabase.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7285CA31A1E50740099F894 /* PropertiesDatabase.plist */; };
 		E7285CA71A1E53310099F894 /* REGPropertiesDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CA61A1E53310099F894 /* REGPropertiesDatabase.m */; };
 		E7285CAA1A1E6B5E0099F894 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CA91A1E6B5E0099F894 /* GlobalConstants.m */; };
+		E7285CAD1A1E6F1A0099F894 /* REGCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		E7285CA61A1E53310099F894 /* REGPropertiesDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REGPropertiesDatabase.m; sourceTree = "<group>"; };
 		E7285CA81A1E6B5E0099F894 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
 		E7285CA91A1E6B5E0099F894 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
+		E7285CAB1A1E6F1A0099F894 /* REGCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REGCharacter.h; sourceTree = "<group>"; };
+		E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REGCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				E7285C821A1E48E60099F894 /* AppDelegate.m */,
 				E7285CA51A1E53310099F894 /* REGPropertiesDatabase.h */,
 				E7285CA61A1E53310099F894 /* REGPropertiesDatabase.m */,
+				E7285CAB1A1E6F1A0099F894 /* REGCharacter.h */,
+				E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */,
 				E7285CA81A1E6B5E0099F894 /* GlobalConstants.h */,
 				E7285CA91A1E6B5E0099F894 /* GlobalConstants.m */,
 				E7285C8A1A1E48E60099F894 /* Images.xcassets */,
@@ -222,6 +227,7 @@
 			files = (
 				E7285CA71A1E53310099F894 /* REGPropertiesDatabase.m in Sources */,
 				E7285C831A1E48E60099F894 /* AppDelegate.m in Sources */,
+				E7285CAD1A1E6F1A0099F894 /* REGCharacter.m in Sources */,
 				E7285CAA1A1E6B5E0099F894 /* GlobalConstants.m in Sources */,
 				E7285C801A1E48E60099F894 /* main.m in Sources */,
 			);
