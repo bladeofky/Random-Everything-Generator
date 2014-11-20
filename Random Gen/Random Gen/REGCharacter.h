@@ -13,11 +13,15 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *occupation;
 @property (nonatomic, strong) NSString *race;
+@property (nonatomic, strong) NSArray *traits;
 
 + (instancetype)randomCharacter;
 - (instancetype)initWithName:(NSString *)name occupation:(NSString *)occupation race:(NSString *)race;
 - (void) randomizeName;
 - (void) randomizeOccupation;
 - (void) randomizeRace;
+- (void) addTrait: (NSString *)trait;
+- (void) removeTraitAtIndex: (NSUInteger)index;
+- (void) changeTraitAtIndex:(NSUInteger)index toTrait:(NSString *)trait;
 
 @end

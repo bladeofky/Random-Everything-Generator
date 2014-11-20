@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "REGCharacter.h"
+#import "REGCharacterEditViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    for (int i = 0; i < 10; i++) {
-        NSLog(@"%@", [REGCharacter randomCharacter]);
-    }
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    REGCharacterEditViewController *characterVC = [[REGCharacterEditViewController alloc]initWithNibName:@"REGCharacterEditViewController" bundle:[NSBundle mainBundle]];
+    characterVC.character = [REGCharacter randomCharacter];
+    
+    self.window.rootViewController = characterVC;
+    
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

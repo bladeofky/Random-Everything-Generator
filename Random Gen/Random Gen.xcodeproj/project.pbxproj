@@ -15,6 +15,8 @@
 		E7285CA71A1E53310099F894 /* REGPropertiesDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CA61A1E53310099F894 /* REGPropertiesDatabase.m */; };
 		E7285CAA1A1E6B5E0099F894 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CA91A1E6B5E0099F894 /* GlobalConstants.m */; };
 		E7285CAD1A1E6F1A0099F894 /* REGCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */; };
+		E7285CB11A1E7F140099F894 /* REGCharacterEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7285CAF1A1E7F140099F894 /* REGCharacterEditViewController.m */; };
+		E7285CB21A1E7F140099F894 /* REGCharacterEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7285CB01A1E7F140099F894 /* REGCharacterEditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		E7285CA91A1E6B5E0099F894 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
 		E7285CAB1A1E6F1A0099F894 /* REGCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REGCharacter.h; sourceTree = "<group>"; };
 		E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REGCharacter.m; sourceTree = "<group>"; };
+		E7285CAE1A1E7F140099F894 /* REGCharacterEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REGCharacterEditViewController.h; sourceTree = "<group>"; };
+		E7285CAF1A1E7F140099F894 /* REGCharacterEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REGCharacterEditViewController.m; sourceTree = "<group>"; };
+		E7285CB01A1E7F140099F894 /* REGCharacterEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = REGCharacterEditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +92,8 @@
 			children = (
 				E7285C811A1E48E60099F894 /* AppDelegate.h */,
 				E7285C821A1E48E60099F894 /* AppDelegate.m */,
-				E7285CA51A1E53310099F894 /* REGPropertiesDatabase.h */,
-				E7285CA61A1E53310099F894 /* REGPropertiesDatabase.m */,
-				E7285CAB1A1E6F1A0099F894 /* REGCharacter.h */,
-				E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */,
+				E7285CB31A1E7F1B0099F894 /* View Controllers */,
+				E7285CB41A1E7F290099F894 /* Model */,
 				E7285CA81A1E6B5E0099F894 /* GlobalConstants.h */,
 				E7285CA91A1E6B5E0099F894 /* GlobalConstants.m */,
 				E7285C8A1A1E48E60099F894 /* Images.xcassets */,
@@ -124,6 +127,27 @@
 				E7285C981A1E48E60099F894 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7285CB31A1E7F1B0099F894 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7285CAE1A1E7F140099F894 /* REGCharacterEditViewController.h */,
+				E7285CAF1A1E7F140099F894 /* REGCharacterEditViewController.m */,
+				E7285CB01A1E7F140099F894 /* REGCharacterEditViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E7285CB41A1E7F290099F894 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7285CA51A1E53310099F894 /* REGPropertiesDatabase.h */,
+				E7285CA61A1E53310099F894 /* REGPropertiesDatabase.m */,
+				E7285CAB1A1E6F1A0099F894 /* REGCharacter.h */,
+				E7285CAC1A1E6F1A0099F894 /* REGCharacter.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +232,7 @@
 			files = (
 				E7285CA41A1E50740099F894 /* PropertiesDatabase.plist in Resources */,
 				E7285C8B1A1E48E60099F894 /* Images.xcassets in Resources */,
+				E7285CB21A1E7F140099F894 /* REGCharacterEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +254,7 @@
 				E7285C831A1E48E60099F894 /* AppDelegate.m in Sources */,
 				E7285CAD1A1E6F1A0099F894 /* REGCharacter.m in Sources */,
 				E7285CAA1A1E6B5E0099F894 /* GlobalConstants.m in Sources */,
+				E7285CB11A1E7F140099F894 /* REGCharacterEditViewController.m in Sources */,
 				E7285C801A1E48E60099F894 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

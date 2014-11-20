@@ -8,9 +8,9 @@
 
 #import "GlobalConstants.h"
 
-NSString const * CHARACTER_NAME_KEY = @"characterName";
-NSString const * RACE_KEY = @"race";
-NSString const * OCCUPATION_KEY = @"occupation";
+NSString * const CHARACTER_NAME_KEY = @"characterName";
+NSString * const RACE_KEY = @"race";
+NSString * const OCCUPATION_KEY = @"occupation";
 
 
 @implementation GlobalConstants

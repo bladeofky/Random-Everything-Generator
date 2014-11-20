@@ -32,11 +32,63 @@
     return [self initWithName:nil occupation:nil race:nil];
 }
 
+#pragma mark - Traits
+-(void)addTrait:(NSString *)trait
+{
+    NSMutableArray *traits;
+    
+    if (self.traits == nil) {
+        traits = [[NSMutableArray alloc]init];
+    }
+    else {
+        traits = [self.traits mutableCopy];
+    }
+    
+    [traits addObject:trait];
+    
+    self.traits = [traits copy];
+}
+
+-(void)removeTraitAtIndex:(NSUInteger)index
+{
+    NSMutableArray *traits;
+    
+    if (self.traits == nil) {
+        traits = [[NSMutableArray alloc]init];
+    }
+    else {
+        traits = [self.traits mutableCopy];
+    }
+    
+    [traits removeObjectAtIndex:index];
+    
+    if ([traits count] != 0) {
+        self.traits = [traits copy];
+    }
+    else {
+        self.traits = nil;
+    }
+}
+
+-(void)changeTraitAtIndex:(NSUInteger)index toTrait:(NSString *)trait
+{
+    NSMutableArray *traits;
+    
+    if (self.traits == nil) {
+        traits = [[NSMutableArray alloc]init];
+    }
+    else {
+        traits = [self.traits mutableCopy];
+    }
+    
+    traits[index] = trait;
+    
+    self.traits = [traits copy];
+}
+
 #pragma mark - Randomization methods
 + (instancetype)randomCharacter
 {
-    REGPropertiesDatabase *database = [REGPropertiesDatabase sharedDatabase];
-    
     REGCharacter *randomCharacter = [[REGCharacter alloc]init];
     
     [randomCharacter randomizeName];
