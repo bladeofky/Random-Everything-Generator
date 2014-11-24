@@ -201,6 +201,7 @@
     self.pseudoCell = pseudoCell;
     self.pseudoCellTextField = pseudoCellTextView;
     self.darkenLayer = darkenLayer;
+    self.editingIndexPath = indexPath;
 }
 
 #pragma mark - UITextViewDelegate Protocol

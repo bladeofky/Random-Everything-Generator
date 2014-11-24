@@ -23,6 +23,7 @@
     
     REGCharacterEditViewController *characterVC = [[REGCharacterEditViewController alloc]initWithNibName:@"REGCharacterEditViewController" bundle:[NSBundle mainBundle]];
     characterVC.character = [REGCharacter randomCharacter];
+    [characterVC.character addTrait:[characterVC.character getRandomTrait]];
     
     self.window.rootViewController = characterVC;
     
