@@ -94,6 +94,7 @@
     [randomCharacter randomizeName];
     [randomCharacter randomizeOccupation];
     [randomCharacter randomizeRace];
+    [randomCharacter addTrait:[randomCharacter getRandomTrait]];
     
     return randomCharacter;
 }
@@ -111,6 +112,11 @@
 -(void)randomizeRace
 {
     self.race = [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:RACE_KEY];
+}
+
+-(NSString *)getRandomTrait
+{
+    return [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:CHARACTER_TRAIT_KEY];
 }
 
 #pragma mark - Miscellaneous

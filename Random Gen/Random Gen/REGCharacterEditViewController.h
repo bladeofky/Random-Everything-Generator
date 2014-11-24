@@ -10,7 +10,7 @@
 
 @class REGCharacter;
 
-@interface REGCharacterEditViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface REGCharacterEditViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *nameField;
 @property (nonatomic, weak) IBOutlet UITextField *raceField;

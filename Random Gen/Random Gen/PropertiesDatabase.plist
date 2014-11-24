@@ -366,5 +366,28 @@
 		<string>Carpenter</string>
 		<string>Servant</string>
 	</array>
+    <key>characterTrait</key>
+    <array>
+        <string>Bulbous nose</string>
+        <string>Storm-swimming eyes</string>
+        <string>Deep scar across mouth</string>
+        <string>Fangs</string>
+        <string>Faded tattooed scalp</string>
+        <string>Missing both little fingers</string>
+        <string>Swirling stone in one eye</string>
+        <string>One arm made of iron</string>
+        <string>Actual silver hair</string>
+        <string>Jaw made of iron</string>
+        <string>Always sketching</string>
+        <string>Wild bird on shoulder</string>
+        <string>Accosted by cats</string>
+        <string>Asymmetric clothing</string>
+        <string>Small skull necklace</string>
+        <string>Chemically burned hand</string>
+        <string>Branded with glyph</string>
+        <string>Missing an ear</string>
+        <string>Possessed by imp</string>
+        <string>Reincarnated devil</string>
+        </array>
 </dict>
 </plist>

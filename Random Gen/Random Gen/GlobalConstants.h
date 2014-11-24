@@ -11,6 +11,7 @@
 extern NSString * const CHARACTER_NAME_KEY;
 extern NSString * const RACE_KEY;
 extern NSString * const OCCUPATION_KEY;
+extern NSString * const CHARACTER_TRAIT_KEY;
 
 @interface GlobalConstants : NSObject
 

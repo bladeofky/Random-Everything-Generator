@@ -20,6 +20,7 @@
 - (void) randomizeName;
 - (void) randomizeOccupation;
 - (void) randomizeRace;
+-(NSString *)getRandomTrait;
 - (void) addTrait: (NSString *)trait;
 - (void) removeTraitAtIndex: (NSUInteger)index;
 - (void) changeTraitAtIndex:(NSUInteger)index toTrait:(NSString *)trait;
