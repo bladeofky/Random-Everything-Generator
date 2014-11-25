@@ -14,9 +14,11 @@
 // Pointers to use during editing of traits
 @property (nonatomic, weak) UITextView *pseudoCellTextField;
 @property (nonatomic, weak) UIView *pseudoCell;
+@property (nonatomic, weak) UITextView *editorTextView;
 @property (nonatomic, weak) UIView *darkenLayer;
 @property (nonatomic, strong) NSIndexPath *editingIndexPath;
 @property (nonatomic) CGRect rectOfOriginalTableViewCell;
+@property (nonatomic) CGRect rectOfOriginalNotesView;
 
 @end
 
@@ -132,6 +134,23 @@
     
 }
 
+-(void)finishEditingNotes
+{
+    // Commit changes
+    self.character.notes = self.editorTextView.text;
+    self.notesTextView.text = self.character.notes;
+    
+    // Animation
+    [UIView animateWithDuration:0.5 animations:^{
+        self.darkenLayer.alpha = 0;
+        self.editorTextView.frame = self.rectOfOriginalNotesView;
+        [self.editorTextView resignFirstResponder];
+    } completion:^(BOOL finished) {
+        [self.darkenLayer removeFromSuperview];
+        [self.editorTextView removeFromSuperview];
+    }];
+}
+
 #pragma mark - UITableViewDataSource Protocol
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -236,17 +255,59 @@
 #pragma mark - UITextViewDelegate Protocol
 -(void)textViewDidChange:(UITextView *)textView
 {
-    CGFloat fixedWidth = textView.bounds.size.width;
-    CGFloat minHeight = 44.0;
-    CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
-    CGRect newFrame = textView.frame;
-    newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), fmaxf(minHeight, newSize.height));
-    textView.frame = newFrame;
+    if (textView == self.pseudoCellTextField) {
+        CGFloat fixedWidth = textView.bounds.size.width;
+        CGFloat minHeight = 44.0;
+        CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+        CGRect newFrame = textView.frame;
+        newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), fmaxf(minHeight, newSize.height));
+        textView.frame = newFrame;
+        
+        UIView *pseudoCell = textView.superview;
+        CGRect oldSuperviewFrame = pseudoCell.frame;
+        CGRect newSuperviewFrame = CGRectMake(oldSuperviewFrame.origin.x, oldSuperviewFrame.origin.y, oldSuperviewFrame.size.width, textView.frame.size.height);
+        pseudoCell.frame = newSuperviewFrame;
+    }
+}
+
+-(BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    BOOL output = YES;
     
-    UIView *pseudoCell = textView.superview;
-    CGRect oldSuperviewFrame = pseudoCell.frame;
-    CGRect newSuperviewFrame = CGRectMake(oldSuperviewFrame.origin.x, oldSuperviewFrame.origin.y, oldSuperviewFrame.size.width, textView.frame.size.height);
-    pseudoCell.frame = newSuperviewFrame;
+    if (textView == self.notesTextView) {
+        // Darken background
+        UIView *darkenLayer = [[UIView alloc]initWithFrame:self.view.frame];
+        darkenLayer.backgroundColor = [UIColor blackColor];
+        darkenLayer.alpha = 0.8;
+        UITapGestureRecognizer *backgroundTapRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(finishEditingNotes)];
+        [darkenLayer addGestureRecognizer:backgroundTapRecognizer];
+        self.darkenLayer = darkenLayer;
+        
+        // Create a text view for editing
+        self.rectOfOriginalNotesView = self.notesTextView.frame;
+        UITextView *editorTextView = [[UITextView alloc]initWithFrame:self.rectOfOriginalNotesView];
+        editorTextView.text = self.notesTextView.text;
+        editorTextView.font = self.notesTextView.font;
+        self.editorTextView = editorTextView;
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            // Add UIView and rearrange order so that notesTextField is on top
+            [self.view addSubview:darkenLayer];
+            [self.view addSubview:editorTextView];
+            
+            // Move editorTextView up
+            CGFloat topMargin = 60.0f;
+            CGFloat estimatedKeyboardHeight = 250;
+            self.editorTextView.frame = CGRectMake(self.rectOfOriginalNotesView.origin.x, topMargin, self.rectOfOriginalNotesView.size.width, self.view.bounds.size.height - topMargin - estimatedKeyboardHeight - topMargin);
+            
+            // Make editorTextView first responder
+            [self.editorTextView becomeFirstResponder];
+        }];
+        
+        output = NO;
+    }
+    
+    return output;
 }
 
 #pragma mark - UITextFieldDelegate Protocal

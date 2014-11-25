@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *occupation;
 @property (nonatomic, strong) NSString *race;
 @property (nonatomic, strong, readonly) NSOrderedSet *traits;
+@property (nonatomic, strong) NSString *notes;
 
 + (instancetype)randomCharacter;
 - (instancetype)initWithName:(NSString *)name occupation:(NSString *)occupation race:(NSString *)race;
