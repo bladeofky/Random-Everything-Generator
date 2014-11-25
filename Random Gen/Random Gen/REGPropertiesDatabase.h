@@ -14,7 +14,7 @@
 
 + (instancetype)sharedDatabase;
 
-- (id)getRandomPropertyForKey: (NSString *)key;
-- (NSArray *)getAllPropertiesForKey: (NSString *)key;
+- (id)randomPropertyForKey: (NSString *)key;
+- (NSArray *)allPropertiesForKey: (NSString *)key;
 
 @end

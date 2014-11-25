@@ -22,6 +22,27 @@
 
 @implementation REGCharacterEditViewController
 
+#pragma mark - Initializers
+// DESIGNATED
+- (instancetype)initWithCharacter:(REGCharacter *)character
+{
+    self = [super initWithNibName:@"REGCharacterEditViewController" bundle:[NSBundle mainBundle]];
+    
+    if (self) {
+        self.character = character;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    REGCharacter *character = [[REGCharacter alloc]init];
+    return [self initWithCharacter:character];
+}
+
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -70,20 +91,28 @@
 
 -(void)didTapOccupationDice
 {
+//    NSLog(@"Did tap occupation dice");
     [self.character randomizeOccupation];
     self.occupationField.text = self.character.occupation;
 }
 
 -(void)didTapTraitDice
 {
-    self.pseudoCellTextField.text = [self.character getRandomTrait];
+    // State change to character.traits
+    NSString *existingTrait = self.character.traits[self.editingIndexPath.row];
+    [self.character changeToRandomTrait:existingTrait];
+    
+    // Update the view
+    self.pseudoCellTextField.text = self.character.traits[self.editingIndexPath.row];
     [self textViewDidChange:self.pseudoCellTextField];
 }
 
 -(void)finishEditingTrait
 {
     // Commit change
-    [self.character changeTraitAtIndex:self.editingIndexPath.row toTrait:self.pseudoCellTextField.text];
+    NSString *existingTrait = self.character.traits[self.editingIndexPath.row];
+    NSString *newTrait = self.pseudoCellTextField.text;
+    [self.character changeTrait:existingTrait toTrait:newTrait];
     
     // Animate
     [UIView animateWithDuration:0.5 animations:
@@ -97,8 +126,8 @@
         [self.pseudoCell removeFromSuperview];
         [self.darkenLayer removeFromSuperview];
         
-        // Reload trait table
-        [self.tableView reloadData];
+         // Reload trait table
+         [self.tableView reloadData];
     }];
     
 }
@@ -125,7 +154,7 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.character.traits[indexPath.row];
-    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.numberOfLines = 0;   // Allows multiple lines of text
     
     return cell;
 }
@@ -145,7 +174,7 @@
     CGFloat minHeight = 44.0;
     CGSize newSize = [textFieldForSizing sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
     
-    NSLog(@"Height for row: %i is %f", indexPath.row, fmaxf(minHeight, newSize.height));
+//    NSLog(@"Height for row: %li is %f", (long)indexPath.row, fmaxf(minHeight, newSize.height));
     
     return fmaxf(minHeight, newSize.height);
 }

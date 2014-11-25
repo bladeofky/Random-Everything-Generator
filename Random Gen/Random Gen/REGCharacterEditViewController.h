@@ -24,4 +24,6 @@
 
 @property (nonatomic, strong) REGCharacter *character;
 
+- (instancetype)initWithCharacter:(REGCharacter *)character;
+
 @end

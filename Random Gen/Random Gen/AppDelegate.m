@@ -21,12 +21,10 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
-    REGCharacterEditViewController *characterVC = [[REGCharacterEditViewController alloc]initWithNibName:@"REGCharacterEditViewController" bundle:[NSBundle mainBundle]];
-    characterVC.character = [REGCharacter randomCharacter];
-    [characterVC.character addTrait:[characterVC.character getRandomTrait]];
+    REGCharacterEditViewController *characterVC = [[REGCharacterEditViewController alloc]initWithCharacter:[REGCharacter randomCharacter]];
+    [characterVC.character addRandomTrait];
     
     self.window.rootViewController = characterVC;
-    
     
     [self.window makeKeyAndVisible];
     

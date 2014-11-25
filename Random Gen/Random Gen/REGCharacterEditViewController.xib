@@ -22,44 +22,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIM-Jq-g4g">
-                    <rect key="frame" x="20" y="60" width="41" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lLx-ky-qxn">
-                    <rect key="frame" x="108" y="55" width="195" height="30"/>
+                    <rect key="frame" x="20" y="55" width="283" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="m36-NT-jZQ"/>
                     </connections>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqt-gA-a4M">
-                    <rect key="frame" x="20" y="110" width="36" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Race" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="awW-Uh-vim">
-                    <rect key="frame" x="108" y="105" width="195" height="30"/>
+                    <rect key="frame" x="20" y="105" width="283" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="DbC-Q8-6fj"/>
                     </connections>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJo-5m-hha">
-                    <rect key="frame" x="20" y="160" width="80" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Occupation" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1zU-Li-yew">
-                    <rect key="frame" x="108" y="155" width="195" height="30"/>
+                    <rect key="frame" x="20" y="155" width="283" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="DLx-2t-Bhl"/>
                     </connections>
@@ -114,32 +96,26 @@
                 <constraint firstItem="awW-Uh-vim" firstAttribute="leading" secondItem="lLx-ky-qxn" secondAttribute="leading" id="2lh-aO-mgo"/>
                 <constraint firstItem="CNb-uT-OeT" firstAttribute="centerY" secondItem="lLx-ky-qxn" secondAttribute="centerY" id="2ph-bI-uUl"/>
                 <constraint firstItem="CNb-uT-OeT" firstAttribute="leading" secondItem="lLx-ky-qxn" secondAttribute="trailing" constant="8" id="8fC-vc-2i9"/>
-                <constraint firstItem="DIM-Jq-g4g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9e1-Yu-DpR"/>
                 <constraint firstItem="ukr-lL-SjE" firstAttribute="top" secondItem="KHs-L7-LuZ" secondAttribute="bottom" constant="20" id="E5C-y5-Otu"/>
                 <constraint firstAttribute="trailing" secondItem="SR4-2K-2tL" secondAttribute="trailing" constant="20" id="EO4-Mb-Efx"/>
                 <constraint firstItem="awW-Uh-vim" firstAttribute="top" secondItem="lLx-ky-qxn" secondAttribute="bottom" constant="20" id="Hwz-c9-QaO"/>
                 <constraint firstAttribute="bottom" secondItem="u6g-he-p6M" secondAttribute="bottom" constant="20" id="Lr1-M0-GBe"/>
                 <constraint firstItem="u6g-he-p6M" firstAttribute="leading" secondItem="ukr-lL-SjE" secondAttribute="leading" id="MxK-oj-Nfq"/>
                 <constraint firstItem="awW-Uh-vim" firstAttribute="leading" secondItem="1zU-Li-yew" secondAttribute="leading" id="NVF-Jm-Ggz"/>
+                <constraint firstItem="lLx-ky-qxn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="OO9-m1-dH3"/>
                 <constraint firstAttribute="trailing" secondItem="u6g-he-p6M" secondAttribute="trailing" constant="20" id="SWB-Zx-rDe"/>
-                <constraint firstItem="Xqt-gA-a4M" firstAttribute="leading" secondItem="DIM-Jq-g4g" secondAttribute="leading" id="TYq-2b-pxc"/>
                 <constraint firstAttribute="trailing" secondItem="CNb-uT-OeT" secondAttribute="trailing" constant="20" id="Wkp-q6-AB0"/>
                 <constraint firstItem="1zU-Li-yew" firstAttribute="top" secondItem="awW-Uh-vim" secondAttribute="bottom" constant="20" id="Y9T-e0-CTE"/>
-                <constraint firstItem="1zU-Li-yew" firstAttribute="leading" secondItem="NJo-5m-hha" secondAttribute="trailing" constant="8" id="ZCa-3W-mFw"/>
-                <constraint firstItem="1zU-Li-yew" firstAttribute="baseline" secondItem="NJo-5m-hha" secondAttribute="baseline" id="ZgN-AG-6Zd"/>
                 <constraint firstItem="awW-Uh-vim" firstAttribute="centerY" secondItem="SR4-2K-2tL" secondAttribute="centerY" constant="1" id="egm-Aq-Ap1"/>
                 <constraint firstAttribute="trailing" secondItem="FKh-Ga-xdi" secondAttribute="trailing" constant="20" id="fHT-vW-1vC"/>
                 <constraint firstItem="KHs-L7-LuZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gpl-ZG-rIS"/>
                 <constraint firstItem="FKh-Ga-xdi" firstAttribute="leading" secondItem="1zU-Li-yew" secondAttribute="trailing" constant="8" id="h4D-cw-NVE"/>
-                <constraint firstItem="DIM-Jq-g4g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="hJu-eN-Un3"/>
-                <constraint firstItem="Xqt-gA-a4M" firstAttribute="leading" secondItem="NJo-5m-hha" secondAttribute="leading" id="lLR-XU-su6"/>
+                <constraint firstItem="lLx-ky-qxn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="55" id="hIh-IS-5zJ"/>
                 <constraint firstItem="SR4-2K-2tL" firstAttribute="leading" secondItem="awW-Uh-vim" secondAttribute="trailing" constant="8" id="men-M5-WT6"/>
-                <constraint firstItem="Xqt-gA-a4M" firstAttribute="baseline" secondItem="awW-Uh-vim" secondAttribute="baseline" id="nrm-mK-3i0"/>
                 <constraint firstItem="FKh-Ga-xdi" firstAttribute="centerY" secondItem="1zU-Li-yew" secondAttribute="centerY" id="p89-Vc-u83"/>
                 <constraint firstItem="KHs-L7-LuZ" firstAttribute="top" secondItem="1zU-Li-yew" secondAttribute="bottom" constant="20" id="pMJ-7N-vPW"/>
                 <constraint firstItem="u6g-he-p6M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="pef-IS-lHP"/>
                 <constraint firstItem="u6g-he-p6M" firstAttribute="top" secondItem="ukr-lL-SjE" secondAttribute="bottom" constant="8" id="tcP-ns-KCI"/>
-                <constraint firstItem="lLx-ky-qxn" firstAttribute="baseline" secondItem="DIM-Jq-g4g" secondAttribute="baseline" id="uff-QF-tN8"/>
                 <constraint firstAttribute="trailing" secondItem="KHs-L7-LuZ" secondAttribute="trailing" id="yfX-31-ltD"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

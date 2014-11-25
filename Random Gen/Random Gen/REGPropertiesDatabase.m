@@ -50,14 +50,14 @@
 
 #pragma mark - Data Retrieval methods
 
--(id)getRandomPropertyForKey:(NSString *)key
+-(id)randomPropertyForKey:(NSString *)key
 {
-    NSArray *properties = [self getAllPropertiesForKey:key];
+    NSArray *properties = [self allPropertiesForKey:key];
     
     return properties[arc4random_uniform([properties count])];
 }
 
-- (NSArray *)getAllPropertiesForKey:(NSString *)key
+- (NSArray *)allPropertiesForKey:(NSString *)key
 {
     return self.index[key];
 }

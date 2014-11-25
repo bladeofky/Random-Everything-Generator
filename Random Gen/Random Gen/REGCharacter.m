@@ -12,6 +12,12 @@
 
 @implementation REGCharacter
 
+#pragma mark - Accessors
+-(void)setTraits:(NSOrderedSet *)traits
+{
+    _traits = traits;
+}
+
 #pragma mark - Initializers
 //DESIGNATED
 -(instancetype)initWithName:(NSString *)name occupation:(NSString *)occupation race:(NSString *)race
@@ -32,13 +38,13 @@
     return [self initWithName:nil occupation:nil race:nil];
 }
 
-#pragma mark - Traits
+#pragma mark - Trait Manipulation
 -(void)addTrait:(NSString *)trait
 {
-    NSMutableArray *traits;
+    NSMutableOrderedSet *traits;
     
     if (self.traits == nil) {
-        traits = [[NSMutableArray alloc]init];
+        traits = [[NSMutableOrderedSet alloc]init];
     }
     else {
         traits = [self.traits mutableCopy];
@@ -49,41 +55,42 @@
     self.traits = [traits copy];
 }
 
--(void)removeTraitAtIndex:(NSUInteger)index
+-(void)removeTrait:(NSString *)trait
 {
-    NSMutableArray *traits;
+    //indexOfObject works by enumerating through the set and sending the isEqual: message to each object. This should return the index of a trait whose NSString is equal to the provided NSString, even if they're in different places in memory.
+    NSUInteger index = [self.traits indexOfObject:trait];
     
-    if (self.traits == nil) {
-        traits = [[NSMutableArray alloc]init];
+    if (index == NSNotFound || self.traits == nil) {
+        NSLog(@"Could not delete trait. Trait not found: %@", trait);
     }
     else {
-        traits = [self.traits mutableCopy];
-    }
-    
-    [traits removeObjectAtIndex:index];
-    
-    if ([traits count] != 0) {
-        self.traits = [traits copy];
-    }
-    else {
-        self.traits = nil;
+        NSMutableOrderedSet *traits = [self.traits mutableCopy];
+        
+        [traits removeObjectAtIndex:index];
+        
+        if ([traits count] != 0) {
+            self.traits = [traits copy];
+        }
+        else {
+            self.traits = nil;
+        }
     }
 }
 
--(void)changeTraitAtIndex:(NSUInteger)index toTrait:(NSString *)trait
+-(void)changeTrait:(NSString *)traitToChange toTrait:(NSString *)newTrait
 {
-    NSMutableArray *traits;
+    NSUInteger index = [self.traits indexOfObject:traitToChange];
     
-    if (self.traits == nil) {
-        traits = [[NSMutableArray alloc]init];
+    if (index == NSNotFound || self.traits == nil) {
+        NSLog(@"Could not change trait. Trait not found: %@", traitToChange);
     }
     else {
-        traits = [self.traits mutableCopy];
+        NSMutableOrderedSet *traits = [self.traits mutableCopy];
+        
+        [traits replaceObjectAtIndex:index withObject:newTrait];
+        
+        self.traits = [traits copy];
     }
-    
-    traits[index] = trait;
-    
-    self.traits = [traits copy];
 }
 
 #pragma mark - Randomization methods
@@ -94,29 +101,39 @@
     [randomCharacter randomizeName];
     [randomCharacter randomizeOccupation];
     [randomCharacter randomizeRace];
-    [randomCharacter addTrait:[randomCharacter getRandomTrait]];
+    [randomCharacter addTrait:[randomCharacter randomTrait]];
     
     return randomCharacter;
 }
 
 - (void)randomizeName
 {
-    self.name = [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:CHARACTER_NAME_KEY];
+    self.name = [[REGPropertiesDatabase sharedDatabase]randomPropertyForKey:CHARACTER_NAME_KEY];
 }
 
 -(void)randomizeOccupation
 {
-    self.occupation = [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:OCCUPATION_KEY];
+    self.occupation = [[REGPropertiesDatabase sharedDatabase]randomPropertyForKey:OCCUPATION_KEY];
 }
 
 -(void)randomizeRace
 {
-    self.race = [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:RACE_KEY];
+    self.race = [[REGPropertiesDatabase sharedDatabase]randomPropertyForKey:RACE_KEY];
 }
 
--(NSString *)getRandomTrait
+-(void)addRandomTrait
 {
-    return [[REGPropertiesDatabase sharedDatabase]getRandomPropertyForKey:CHARACTER_TRAIT_KEY];
+    [self addTrait:[self randomTrait]];
+}
+
+-(void)changeToRandomTrait:(NSString *)traitToChange
+{
+    [self changeTrait:traitToChange toTrait:[self randomTrait]];
+}
+
+-(NSString *)randomTrait
+{
+    return [[REGPropertiesDatabase sharedDatabase]randomPropertyForKey:CHARACTER_TRAIT_KEY];
 }
 
 #pragma mark - Miscellaneous
